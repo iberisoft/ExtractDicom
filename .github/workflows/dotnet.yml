@@ -1,0 +1,13 @@
+name: .NET
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: dotnet build ExtractDicom.sln --configuration Release
